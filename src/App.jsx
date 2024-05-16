@@ -1,5 +1,6 @@
 import { SafeAreaView, StyleSheet } from "react-native";
-import Botao from "./components/Botao";
+import Contador from "./components/Contador";
+// import Botao from "./components/Botao";
 // import Titulo from "./components/Titulol";
 // import Primeiro from "./components/Primeiro";
 // import Comp, { Comp1, Comp2 } from "./components/Mult";
@@ -10,9 +11,10 @@ function App() {
     return (
         <SafeAreaView style={styles.App}>
             
-            <Botao />
-            
+            <Contador inicial={100} passo={13} />
+
             {/*
+            <Botao />
             <Titulo principal="Cadastro Produto" secundario="Tela de Cadastro do Produto" />
             <ValorAleatorio min={1} max={60} />
             <MinMax min={3} max={20} ></MinMax>
