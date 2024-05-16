@@ -1,6 +1,7 @@
 import { Text } from "react-native";
 import Style from "./estilo";
 
+
 function MinMax(props) {
     console.warn(props);
     return ( 
