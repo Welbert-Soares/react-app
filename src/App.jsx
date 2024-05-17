@@ -1,5 +1,6 @@
 import { SafeAreaView, StyleSheet } from "react-native";
 import DigiteSeuNome from "./components/DigiteSeuNome";
+import Quadrado from "./components/layout/Quadrado";
 // import Contador from "./components/Contador";
 // import Botao from "./components/Botao";
 // import Titulo from "./components/Titulol";
@@ -12,9 +13,12 @@ function App() {
     return (
         <SafeAreaView style={styles.App}>
 
-            <DigiteSeuNome />
+            <Quadrado />
+            <Quadrado cor={"#f00"} />
+            <Quadrado cor={"#0f0"} />
 
             {/*
+            <DigiteSeuNome />
             <Contador inicial={100} passo={13} />
             <Botao />
             <Titulo principal="Cadastro Produto" secundario="Tela de Cadastro do Produto" />

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Text, TextInput, View } from "react-native";
 import Estilo from "./estilo";
 
-export default (props) => {
+export default () => {
     const [nome, setNome] = useState("Teste");
     return (
         <View style={Estilo.txtG}>

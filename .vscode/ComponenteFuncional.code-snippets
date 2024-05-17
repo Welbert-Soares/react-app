@@ -1,7 +1,7 @@
 {
 	
 	"Componente Funcional": {
-		"scope": " javascript",
+		"scope": " javascript, javascriptreact",
 		"prefix": "luna",
 		"body": [
 			"import React from 'react';",
