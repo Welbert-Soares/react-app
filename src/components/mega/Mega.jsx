@@ -22,20 +22,30 @@ export default class Mega extends Component {
         return nums.includes(novo) ? this.gerarNumerosNaoContidos(nums) : novo;
     };
 
+    // gerarNumeros = () => {
+    //     const numeros = Array(this.state.qtdNumeros)
+    //         .fill()
+    //         .reduce((n) => [...n, this.gerarNumerosNaoContidos(n)], [])
+    //         .sort((a, b) => a - b);
+    //     this.setState({ numeros})
+    // }
+
     gerarNumeros = () => {
-        const numeros = Array(this.state.qtdNumeros)
-            .fill()
-            .reduce((n) => [...n, this.gerarNumerosNaoContidos(n)], [])
-            .sort((a, b) => a - b);
-        this.setState({ numeros})
-    }
+        const { qtdNumeros } = this.state;
+        const numeros = [];
+
+        for (let i = 0; i < qtdNumeros; i++) {
+            numeros.push(this.gerarNumerosNaoContidos(numeros));
+        }
+
+        numeros.sort((a, b) => a - b);
+        this.setState({ numeros });
+    };
 
     render() {
         return (
             <>
-                <Text style={Estilo.txtG}>
-                    Gerador de Mega-Sena
-                </Text>
+                <Text style={Estilo.txtG}>Gerador de Mega-Sena</Text>
                 <TextInput
                     keyboardType="numeric"
                     style={{ borderBottomWidth: 1 }}
@@ -44,9 +54,7 @@ export default class Mega extends Component {
                     onChangeText={this.alterarQtdNumeros}
                 />
                 <Button title="Gerar" onPress={this.gerarNumeros} />
-                <Text>
-                    {this.state.numeros.join(", ")}
-                </Text>
+                <Text>{this.state.numeros.join(", ")}</Text>
             </>
         );
     }
