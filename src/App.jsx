@@ -1,6 +1,7 @@
 import { SafeAreaView, StyleSheet } from "react-native";
-import DigiteSeuNome from "./components/DigiteSeuNome";
-import Quadrado from "./components/layout/Quadrado";
+import Flexbox from "./components/layout/Flexbox";
+// import DigiteSeuNome from "./components/DigiteSeuNome";
+// import Quadrado from "./components/layout/Quadrado";
 // import Contador from "./components/Contador";
 // import Botao from "./components/Botao";
 // import Titulo from "./components/Titulol";
@@ -13,9 +14,7 @@ function App() {
     return (
         <SafeAreaView style={styles.App}>
 
-            <Quadrado />
-            <Quadrado cor={"#f00"} />
-            <Quadrado cor={"#0f0"} />
+            <Flexbox />
 
             {/*
             <DigiteSeuNome />
