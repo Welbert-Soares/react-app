@@ -18,7 +18,7 @@ function App() {
     return (
         <SafeAreaView style={styles.App}>
 
-            <Mega qtdNumeros={7} />
+            <Mega qtdNumeros={12} />
 
             {/*
             <FlexboxV4 />
